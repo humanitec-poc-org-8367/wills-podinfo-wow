@@ -13,7 +13,14 @@ containers:
   frontend:
     variables:
       HELLO: WORLD
+      S3_BUCKET: ${resources.assets.bucket}
+      S3_REGION: ${resources.assets.region}
 
 resources:
   dns: # We need a DNS record to point to the service 
     type: dns
+  assets:
+    type: s3
+    properties:
+      bucket:
+      region:
