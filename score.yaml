@@ -24,3 +24,5 @@ resources:
     properties:
       bucket:
       region:
+  files:
+    type: s3
